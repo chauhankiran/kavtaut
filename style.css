@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* * {
+    border: 1px solid red;
+} */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #222;
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#location-bar {
+    height: 3rem;
+
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid #ccc;
+}
+
+#method,
+#send {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    border: 1px solid #ccc;
+
+    display: flex;
+    flex: 0 0 auto;
+
+    margin: 0.4rem;
+    height: calc(100% - 0.8rem);
+}
+
+#url {
+    font-family: monospace;
+    font-size: inherit;
+    line-height: inherit;
+
+    border: 1px solid #ccc;
+    outline: none;
+
+    display: flex;
+    flex: 1 1 0;
+
+    margin: 0.4rem;
+    padding: 0.4rem;
+
+    height: calc(100% - 0.8rem);
+}
+#url:hover {
+    border-color: darkred;
+}
+#url:focus,
+#url:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border-color: darkred;
+}
+#url:active {
+    outline: none;
+    box-shadow: none;
+}
+
+#send {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 3rem - 2rem);
+
+    border: 1px solid #ccc;
+    border-top: none; /* got from #location-bar */
+}
+
+#request-panel,
+#response-panel {
+    padding: 0.4rem;
+    flex: 0 0 50%;
+}
+
+#request-panel {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+#response-panel {
+    overflow: hidden;
+    border-right: 1px solid #ccc;
+}
+
+#status-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+
+    height: 2rem;
+
+    border: 1px solid #ccc;
+    border-top: none; /* got from #main */
+}
+
+#name {
+    color: darkred;
+}
+#version {
+    font-size: 85%;
+    padding-left: 0.25rem;
+}
+
+/*
+ * Override.
+ * ================================================================================
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+    white-space: break-spaces;
+}
+
+pre[class*="language-"] {
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
+}

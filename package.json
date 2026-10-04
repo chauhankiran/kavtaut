@@ -1,0 +1,21 @@
+{
+    "name": "kavtaut",
+    "version": "1.0.0",
+    "description": "API Client for Experimentalist!",
+    "main": "main.js",
+    "scripts": {
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "start": "electron ."
+    },
+    "author": "KC <kc@marichi.dev",
+    "license": "GPL-3.0-only",
+    "type": "commonjs",
+    "devDependencies": {
+        "electron": "44.5.1",
+        "prettier": "3.9.9"
+    },
+    "dependencies": {
+        "prismjs": "^1.30.0"
+    }
+}

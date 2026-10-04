@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kavtaut</title>
+
+        <link rel="stylesheet" href="./node_modules/prismjs/themes/prism-okaidia.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="location-bar">
+            <select id="method">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+                <option value="PUT">PUT</option>
+                <option value="PATCH">PATCH</option>
+                <option value="DELETE">DELETE</option>
+            </select>
+
+            <input type="text" id="url" placeholder="http://localhost:3000/v1/api/ping" />
+
+            <button type="button" id="send">Send</button>
+        </div>
+        <div id="main">
+            <div id="request-panel">#request-panel</div>
+            <div id="response-panel">
+                <pre><code id="response" class="language-json"></code></pre>
+            </div>
+        </div>
+        <div id="status-bar">
+            <span id="name">Kavtaut</span>
+            <span id="version">v0.0.1</span>
+        </div>
+
+        <script src="./node_modules/prismjs/prism.js"></script>
+        <script src="./node_modules/prismjs/components/prism-json.min.js"></script>
+        <script src="./renderer.js"></script>
+    </body>
+</html>
